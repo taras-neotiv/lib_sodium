@@ -1,23 +1,23 @@
-# flutter_sodium
+# libsodium-dart
 
-With flutter_sodium you get access to the modern, easy-to-use [libsodium](https://download.libsodium.org/doc/) crypto library in your [Flutter](https://flutter.io) apps. One set of crypto APIs supporting both Android and iOS.
+Fix for allowing https://github.com/firstfloorsoftware/flutter_sodium to run in pure-dart non-flutter applications.
 
-[![Pub](https://img.shields.io/pub/v/flutter_sodium.svg)](https://pub.dartlang.org/packages/flutter_sodium)
+[![Pub](https://img.shields.io/pub/v/libsodium.svg)](https://pub.dartlang.org/packages/libsodium)
 
 ## Getting Started
 
-In your flutter project add the dependency:
+In your dart project add the dependency:
 
 ```yml
 dependencies:
   ...
-  flutter_sodium: ^0.1.6
+  libsodium: ^0.1.6
 ```
 
 Import the plugin and initialize it. Sodium.init() initializes the plugin and should be called before any other function provided by flutter_sodium.
 
 ```dart
-import 'package:flutter_sodium/flutter_sodium.dart';
+import 'package:libsodium/libsodium.dart';
 
 // initialize sodium
 Sodium.init();
@@ -40,10 +40,8 @@ assert(valid);
 
 This project includes an extensive example app with runnable code samples. Be sure to check it out!
 
-<img src="https://raw.githubusercontent.com/firstfloorsoftware/flutter_sodium/master/example/assets/screenshots/screenshot1.png" width="300">
-
 ## API coverage
-The flutter_sodium plugin implements the following libsodium APIs:
+The libsodium plugin implements the following libsodium APIs:
 - crypto_aead
 - crypto_auth
 - crypto_box
