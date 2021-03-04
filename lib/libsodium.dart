@@ -1,4 +1,4 @@
-library flutter_sodium;
+library libsodium;
 
 export 'src/cha_cha20_poly1305_ietf.dart';
 export 'src/cha_cha20_poly1305.dart';
