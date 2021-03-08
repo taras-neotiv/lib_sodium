@@ -1,7 +1,7 @@
 import 'dart:ffi';
 import 'dart:io';
 
-import 'package:flutter_sodium/flutter_sodium.dart';
+import 'package:libsodium/libsodium.dart';
 
 final libsodium = _load();
 
