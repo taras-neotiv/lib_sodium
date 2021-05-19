@@ -6,5 +6,5 @@ import 'dart:typed_data';
 class SessionKeys {
   final Uint8List rx, tx;
 
-  const SessionKeys({ this.rx, this.tx });
+  const SessionKeys({required this.rx, required this.tx});
 }

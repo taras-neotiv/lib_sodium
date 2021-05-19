@@ -4,5 +4,5 @@ import 'dart:typed_data';
 class KeyPair {
   final Uint8List pk, sk;
 
-  const KeyPair({ this.pk, this.sk });
+  const KeyPair({required this.pk, required this.sk});
 }
