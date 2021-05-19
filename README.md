@@ -11,7 +11,8 @@ In your dart project add the dependency:
 ```yml
 dependencies:
   ...
-  libsodium: ^0.1.6
+  libsodium: ^0.2.0
+  flutter_sodium: ^0.2.0
 ```
 
 Import the plugin and initialize it. Sodium.init() initializes the plugin and should be called before any other function provided by flutter_sodium.
@@ -60,7 +61,7 @@ The libsodium plugin implements the following libsodium APIs:
 - randombytes
 - sodium_version
 
-API coverage is not 100% complete, track the progress in issue #35.
+API coverage is not 100% complete, track the progress in [issue #61](https://github.com/firstfloorsoftware/flutter_sodium/issues/61)
 
 ## Dart APIs
 The plugin includes a core API that maps native libsodium functions 1:1 to Dart equivalents. The core API is available in the class [`Sodium`](https://github.com/firstfloorsoftware/flutter_sodium/blob/master/lib/flutter_sodium.dart). Dart naming conventions are used for core API function names. A native libsodium function such as `crypto_pwhash_str`, is available in flutter as `Sodium.cryptoPwhashStr`.
@@ -84,6 +85,3 @@ final str = await compute(PasswordHash.hashStringStorageModerate, pw);
 
 print(str);
 ```
-
-## Known issues
-- Previous incarnations of flutter_sodium used platform channels for native interop. The latest version has been rewritten to take full advantage of Dart FFI. FFI offers fast native interop and is the obvious choice for flutter_sodium. One minor problem, FFI is still in beta and its API may change. This may affect flutter_sodium.

@@ -5,5 +5,5 @@ class InitPushResult {
   final Pointer<Uint8> state;
   final Uint8List header;
 
-  const InitPushResult({ this.state, this.header});
+  const InitPushResult({required this.state, required this.header});
 }

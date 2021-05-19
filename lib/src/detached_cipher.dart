@@ -4,5 +4,5 @@ import 'dart:typed_data';
 class DetachedCipher {
   final Uint8List c, mac;
 
-  const DetachedCipher({ this.c, this.mac });
+  const DetachedCipher({required this.c, required this.mac});
 }
